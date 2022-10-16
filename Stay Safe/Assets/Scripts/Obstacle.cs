@@ -13,6 +13,7 @@ public class Obstacle : MonoBehaviour
         if (col.CompareTag("Border"))
         {
             Destroy(gameObject);
+            EventManager.UpdateScore?.Invoke();
         }
         else if (col.CompareTag("Player"))
         {
